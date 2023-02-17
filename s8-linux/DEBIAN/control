@@ -1,0 +1,7 @@
+Package:s8
+Version:0.1
+Architecture:all
+Essential:no
+Priority:optional
+Maintainer:DERKARIOM
+Description:Pour la gestion du serveur s8-termux
