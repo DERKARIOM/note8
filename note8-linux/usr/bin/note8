@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ "$1" == "-v" ] ; then
+    echo "Gestion du serveur termux 0.1 beta"
+elif [ "$1" == "push" ] ; then
+    scp -O -r "$2" u0_a385@note8:/data/data/com.termux/files/home/storage/shared/"$3"
+elif [ "$1" == "pull" ] ; then
+    scp -O -r u0_a385@note8:/data/data/com.termux/files/home/storage/shared/"$2" .
+elif [ "$1" == "connect" ] ; then
+    ssh u0_a385@note8
+elif [ "$1" == "--termux" -a "$1" == "push" ] ; then
+    scp -O -r "$3" u0_a385@note8:/data/data/com.termux/files/home/"$4"
+elif [ "$1" == "--termux" -a "$1" == "pull" ] ; then
+    scp -O -r u0_a385@note8:/data/data/com.termux/files/home/"$3" .
+fi
