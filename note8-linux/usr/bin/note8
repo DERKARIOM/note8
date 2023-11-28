@@ -15,4 +15,8 @@ elif [ "$1" == "endata" ] ; then
     ssh -t note8 sudo svc data enable
 elif [ "$1" == "didata" ] ; then
     ssh -t note8 sudo svc data disable
+elif [ "$1" == "enbt" ] ; then
+    ssh -t note8 sudo svc bluetooth enable
+elif [ "$1" == "dibt" ] ; then
+    ssh -t note8 sudo svc bluetooth disable
 fi
