@@ -19,4 +19,7 @@ elif [ "$1" == "enbt" ] ; then
     ssh -t note8 sudo svc bluetooth enable
 elif [ "$1" == "dibt" ] ; then
     ssh -t note8 sudo svc bluetooth disable
+elif [ "$1" == "level" ] ; then
+    level=$(ssh -t note8 sudo dumpsys battery | grep level | cut -d: -f 2)
+    echo "$level"
 fi
