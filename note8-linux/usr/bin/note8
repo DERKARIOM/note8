@@ -24,4 +24,6 @@ elif [ "$1" == "level" ] ; then
     echo "$level"
 elif [ "$1" == "on" ] ; then
     ssh -t note8 ./limiti2.sh
+elif [ "$1" == "reboot" ] ; then
+    ssh -t note8 sudo reboot
 fi
